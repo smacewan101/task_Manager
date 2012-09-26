@@ -21,18 +21,20 @@ public final class R {
     }
     public static final class id {
         public static final int authorName=0x7f080001;
-        public static final int fragment_container=0x7f080006;
-        public static final int menu_settings=0x7f08000c;
+        public static final int delete_button=0x7f08000d;
+        public static final int fragment_container=0x7f080007;
+        public static final int menu_settings=0x7f08000e;
         public static final int myEditText=0x7f080003;
-        public static final int new_task=0x7f080004;
+        public static final int new_task=0x7f080005;
+        public static final int new_task_name=0x7f080004;
         public static final int nextScreen=0x7f080002;
-        public static final int pause_button=0x7f08000a;
+        public static final int pause_button=0x7f08000b;
         public static final int projectTitle=0x7f080000;
-        public static final int restart_button=0x7f08000b;
-        public static final int scroller=0x7f080005;
-        public static final int start_button=0x7f080009;
-        public static final int taskName=0x7f080007;
-        public static final int task_time=0x7f080008;
+        public static final int restart_button=0x7f08000c;
+        public static final int scroller=0x7f080006;
+        public static final int start_button=0x7f08000a;
+        public static final int taskName=0x7f080008;
+        public static final int task_time=0x7f080009;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -46,12 +48,14 @@ public final class R {
     public static final class string {
         public static final int app_name=0x7f050000;
         public static final int author_name=0x7f050005;
-        public static final int button_pause=0x7f05000a;
-        public static final int button_restart=0x7f05000b;
-        public static final int button_start=0x7f050009;
+        public static final int button_delete=0x7f05000d;
+        public static final int button_pause=0x7f05000b;
+        public static final int button_restart=0x7f05000c;
+        public static final int button_start=0x7f05000a;
+        public static final int enter_task=0x7f050008;
         public static final int hello_world=0x7f050001;
         public static final int menu_settings=0x7f050002;
-        public static final int new_task=0x7f050008;
+        public static final int new_task=0x7f050009;
         public static final int project_title=0x7f050004;
         public static final int task_hint=0x7f050007;
         public static final int title_activity_main=0x7f050003;

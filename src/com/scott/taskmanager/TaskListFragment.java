@@ -1,8 +1,8 @@
 package com.scott.taskmanager;
 
-import java.util.Date;
-
+import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.LayoutInflater;
@@ -10,10 +10,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class TaskListFragment extends Fragment {	
 	long elapsedTime;
 	Chronometer stopWatch;
+	String name;
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
 		View view = inflater.inflate(R.layout.taskitem_view, null);	
@@ -23,7 +26,8 @@ public class TaskListFragment extends Fragment {
 		
 		Button.OnClickListener startListener = new Button.OnClickListener(){
 			public void onClick(View v){
-				int stoppedMilliseconds = 0;
+				//code courtesy of stackoverflow
+				 int stoppedMilliseconds = 0;
 		         String chronoText = stopWatch.getText().toString();
 		         String array[] = chronoText.split(":");
 		         if (array.length == 2) {
@@ -37,7 +41,17 @@ public class TaskListFragment extends Fragment {
 		        stopWatch.setBase(SystemClock.elapsedRealtime() - stoppedMilliseconds);
 				stopWatch.start();
 			}
-		};			
+		};
+		
+		final Activity activity = getActivity();
+		final TaskListFragment thisTask = this;
+		Button.OnClickListener deleteListener = new Button.OnClickListener(){
+			public void onClick(View v){
+				FragmentTransaction ft = activity.getFragmentManager().beginTransaction();
+				ft.remove(thisTask);
+				ft.commit();
+			}
+		};
 		
 		Button.OnClickListener stopListener = new Button.OnClickListener(){
 			public void onClick(View v){
@@ -59,27 +73,34 @@ public class TaskListFragment extends Fragment {
 		pauseButton.setOnClickListener(stopListener);
 		
 		Button restartButton = (Button) view.findViewById(R.id.restart_button);
-		restartButton.setOnClickListener(resetListener);		
+		restartButton.setOnClickListener(resetListener);
+		
+		Button deleteButton = (Button) view.findViewById(R.id.delete_button);
+		deleteButton.setOnClickListener(deleteListener);
 		
 		return view;
 	}
 	
-	/*
-	public interface OnTaskItemSelectedListener{
-		public void onTaskItemSelected(String id);
-	}
-	
-	private OnTaskItemSelectedListener onTaskItemSelected;
-	
 	public void onAttach(Activity activity){
+		
 		super.onAttach(activity);
-		try{
-			onTaskItemSelected = (OnTaskItemSelectedListener) activity;
-		}catch(ClassCastException e){
-			
-		}				
+		EditText taskName = (EditText) activity.findViewById(R.id.new_task_name);
+		name = taskName.getText().toString();	
 	}
 	
 	
-	*/
+	public void onActivityCreated(Bundle savedInstanceState){
+		super.onActivityCreated(savedInstanceState);
+		
+		Activity parent= getActivity();
+		View fragView = this.getView();
+		EditText taskName = (EditText) parent.findViewById(R.id.new_task_name);
+		TextView taskTitle = (TextView) fragView.findViewById(R.id.taskName);		
+		taskTitle.setText(name);
+		taskName.setText("");
+	}
+	
+	public void onDestroy(){
+		super.onDestroy();
+	}
 }

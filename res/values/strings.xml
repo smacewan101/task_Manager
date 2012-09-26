@@ -7,10 +7,12 @@
     <string name="project_title">Task Manager</string>
     <string name="author_name">Scott MacEwan</string>
     <string name="title_activity_task">Task Activity</string>
-    <string name="task_hint">Start new task</string>
+    <string name="task_hint">Start task</string>
+    <string name="enter_task">Enter task name</string>
     <string name="new_task">New Task</string>
     <string name="button_start">Start</string>
     <string name="button_pause">Pause</string>
     <string name="button_restart">Restart</string>
+    <string name="button_delete">Delete</string>
 
 </resources>
