@@ -62,6 +62,7 @@ public class TaskListFragment extends Fragment {
 		
 		Button.OnClickListener resetListener = new Button.OnClickListener(){
 			public void onClick(View v){
+				stopWatch.stop();
 				stopWatch.setBase(SystemClock.elapsedRealtime());
 			}
 		};

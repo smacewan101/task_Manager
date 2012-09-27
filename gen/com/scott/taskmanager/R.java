@@ -13,6 +13,10 @@ public final class R {
     public static final class color {
         public static final int black=0x7f040001;
         public static final int blue=0x7f040002;
+        public static final int greenBody=0x7f040004;
+        public static final int greenButton=0x7f040006;
+        public static final int greenTop=0x7f040005;
+        public static final int lBlue=0x7f040003;
         public static final int orange=0x7f040000;
     }
     public static final class drawable {
@@ -21,20 +25,22 @@ public final class R {
     }
     public static final class id {
         public static final int authorName=0x7f080001;
-        public static final int delete_button=0x7f08000d;
-        public static final int fragment_container=0x7f080007;
-        public static final int menu_settings=0x7f08000e;
+        public static final int delete_button=0x7f08000f;
+        public static final int fragment_container=0x7f080009;
+        public static final int menu_settings=0x7f080010;
         public static final int myEditText=0x7f080003;
-        public static final int new_task=0x7f080005;
+        public static final int new_task=0x7f080006;
         public static final int new_task_name=0x7f080004;
         public static final int nextScreen=0x7f080002;
-        public static final int pause_button=0x7f08000b;
+        public static final int pause_button=0x7f08000d;
         public static final int projectTitle=0x7f080000;
-        public static final int restart_button=0x7f08000c;
-        public static final int scroller=0x7f080006;
-        public static final int start_button=0x7f08000a;
-        public static final int taskName=0x7f080008;
-        public static final int task_time=0x7f080009;
+        public static final int restart_button=0x7f08000e;
+        public static final int scroller=0x7f080008;
+        public static final int separator=0x7f080005;
+        public static final int separator_2=0x7f080007;
+        public static final int start_button=0x7f08000c;
+        public static final int taskName=0x7f08000a;
+        public static final int task_time=0x7f08000b;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

@@ -2,5 +2,9 @@
 <resources>
     <color name="orange">#FFFF9133</color>
     <color name="black">#000000</color>
-    <color name="blue">#0055FF</color>
+    <color name="blue">#DD2255AA</color>
+    <color name="lBlue">#FF2288FF</color>
+    <color name="greenBody">#247F39</color>
+    <color name="greenTop">#3ACC5C</color>
+    <color name="greenButton">#587F61</color>
 </resources>

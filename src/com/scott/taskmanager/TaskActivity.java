@@ -23,6 +23,7 @@ public class TaskActivity extends Activity{
 		OnClickListener listener = new OnClickListener(){
 			public void onClick(View v){
 				/*
+				//Edited for when persistance works
 				if(taskNames.contains(taskName.getText().toString())){
 					Context context = getApplicationContext();
 					CharSequence txt = "A task of that name already exits. Please choose another";
